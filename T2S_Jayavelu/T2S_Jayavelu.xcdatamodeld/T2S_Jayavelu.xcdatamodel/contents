@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17F77" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AddOn" representedClassName="AddOn" syncable="YES">
+        <attribute name="adonid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="adonname" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="MainMenu" representedClassName="MainMenu" syncable="YES">
+        <attribute name="menuname" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="submenu" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SubMenu" syncable="YES"/>
+    </entity>
+    <entity name="SubMenu" representedClassName="SubMenu" syncable="YES">
+        <attribute name="submenuid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="submenuname" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="addon" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AddOn" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AddOn" positionX="27" positionY="188" width="128" height="73"/>
+        <element name="MainMenu" positionX="-306" positionY="18" width="128" height="73"/>
+        <element name="SubMenu" positionX="-90" positionY="-117" width="128" height="88"/>
+    </elements>
+</model>
